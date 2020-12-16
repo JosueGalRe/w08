@@ -8,6 +8,8 @@
   "extends": ["airbnb", "prettier", "prettier/react", "plugin:react/recommended", "plugin:react-hooks/recommended"],
   "plugins": ["@typescript-eslint", "jest", "prettier"],
   "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "camelcase": ["off"],
     "no-shadow": "off",
     "import/extensions": [
