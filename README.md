@@ -1,14 +1,10 @@
-# Applaudo Studios Trainee Program: Week 07
+# Applaudo Studios Trainee Program: Week 08
 
 Trainee: Bryan Josué Galdámez Recinos
 
-### Time Travel Application
+### Marvel Comics Online Page
 
-Simple app that tracks the colors the user has clicked on.
-
-### Tic Tac Toe
-
-Simple Tac Toe game.
+Marvel Comics webpage using Marvel API
 
 ## Available Scripts
 
