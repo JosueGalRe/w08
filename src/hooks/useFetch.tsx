@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
+import { AxiosError } from 'axios';
 import { API, API_AUTH } from 'utils/API';
 
 type useFetchTypes = {
   method: 'get';
   url: string;
   data?: string;
-  config?: string;
 };
 
-const useFetch = <T,>({ method, url, data, config }: useFetchTypes): [T[], { error: boolean; body: string }, boolean] => {
+const useFetch = <T,>({ method, url, data }: useFetchTypes): [T[], { error: boolean; body: string }, boolean] => {
   const [response, setResponse] = useState<T[]>([]);
   const [error, setError] = useState({ error: false, body: '' });
   const [isLoading, setIsLoading] = useState(true);
@@ -16,13 +16,13 @@ const useFetch = <T,>({ method, url, data, config }: useFetchTypes): [T[], { err
   useEffect(() => {
     const fetchData = async () => {
       API({ url: url + API_AUTH(), method, data })
-        .then((response: { data: any }): any => {
+        .then((response: { data: T[] }): void => {
           setResponse(response.data);
         })
         .finally(() => {
           setIsLoading(false);
         })
-        .catch((error) => {
+        .catch((error: AxiosError) => {
           let errorInfo: string;
           if (error.response) {
             errorInfo = `${error.response.status}: ${error.response.data}`;
@@ -38,7 +38,7 @@ const useFetch = <T,>({ method, url, data, config }: useFetchTypes): [T[], { err
     };
 
     fetchData();
-  }, [method, url, data, config]);
+  }, [method, url, data]);
 
   return [response, error, isLoading];
 };
