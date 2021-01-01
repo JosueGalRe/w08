@@ -3,19 +3,18 @@ import { AxiosError } from 'axios';
 import { API, API_AUTH } from 'utils/API';
 
 type useFetchTypes = {
-  method: 'get';
+  method?: 'get';
   url: string;
-  data?: string;
 };
 
-const useFetch = <T,>({ method, url, data }: useFetchTypes): [T[], { error: boolean; body: string }, boolean] => {
+const useFetch = <T,>({ url, method = 'get' }: useFetchTypes): [T[], { error: boolean; body: string }, boolean] => {
   const [response, setResponse] = useState<T[]>([]);
   const [error, setError] = useState({ error: false, body: '' });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      API({ url: url + API_AUTH(), method, data })
+      API({ url: url + API_AUTH(), method })
         .then((response: { data: T[] }): void => {
           setResponse(response.data);
         })
@@ -38,7 +37,7 @@ const useFetch = <T,>({ method, url, data }: useFetchTypes): [T[], { error: bool
     };
 
     fetchData();
-  }, [method, url, data]);
+  }, [url]);
 
   return [response, error, isLoading];
 };
