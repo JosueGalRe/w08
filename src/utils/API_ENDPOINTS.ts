@@ -44,6 +44,8 @@ const urlCreator: urlCreatorTypes = (endpoint, params) => {
     } else {
       returningURL += `?${paramsWrapper(params)}`;
     }
+  } else {
+    returningURL += '?';
   }
   return returningURL;
 };
