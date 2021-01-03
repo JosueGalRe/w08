@@ -1,7 +1,7 @@
 import StoryDataWrapper from 'interfaces/stories/StoryDataWrapper';
 
 export interface IMarvelStories {
-  data: StoryDataWrapper[];
+  data: StoryDataWrapper | null;
   favorites: number[];
   disliked: number[];
   selected: StoryDataWrapper | null;

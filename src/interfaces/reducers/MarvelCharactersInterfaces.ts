@@ -1,7 +1,7 @@
 import CharacterDataWrapper from 'interfaces/characters/CharacterDataWrapper';
 
 export interface IMarvelCharacters {
-  data: CharacterDataWrapper[];
+  data: CharacterDataWrapper | null;
   favorites: number[];
   disliked: number[];
   selected: CharacterDataWrapper | null;
@@ -21,7 +21,7 @@ export enum MarvelCharactersActionList {
 interface MarvelCharactersSetCharacters {
   type: MarvelCharactersActionList.SET_CHARACTERS;
   payload: {
-    data: CharacterDataWrapper[];
+    data: CharacterDataWrapper;
   };
 }
 

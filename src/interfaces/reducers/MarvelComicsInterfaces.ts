@@ -1,7 +1,7 @@
 import ComicDataWrapper from 'interfaces/comics/ComicDataWrapper';
 
 export interface IMarvelComics {
-  data: ComicDataWrapper[];
+  data: ComicDataWrapper | null;
   favorites: number[];
   disliked: number[];
   selected: ComicDataWrapper | null;
@@ -21,7 +21,7 @@ export enum MarvelComicsActionList {
 interface MarvelComicsSetComics {
   type: MarvelComicsActionList.SET_COMICS;
   payload: {
-    data: ComicDataWrapper[];
+    data: ComicDataWrapper;
   };
 }
 
