@@ -38,6 +38,7 @@ const useFetch = <T,>({ url, method = 'get' }: useFetchTypes): [T | null, { erro
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   return [response, error, isLoading];
