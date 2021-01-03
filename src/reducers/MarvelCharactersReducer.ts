@@ -5,7 +5,7 @@ import {
 } from 'interfaces/reducers/MarvelCharactersInterfaces';
 
 const MarvelCharactersInitialState: IMarvelCharacters = {
-  data: [],
+  data: null,
   selected: null,
   favorites: [],
   disliked: [],

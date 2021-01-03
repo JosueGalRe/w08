@@ -1,7 +1,7 @@
 import { IMarvelStories, MarvelStoriesActionList, MarvelStoriesActions } from 'interfaces/reducers/MarvelStoriesInterfaces';
 
 const MarvelStoriesInitialState: IMarvelStories = {
-  data: [],
+  data: null,
   selected: null,
   favorites: [],
   disliked: [],
