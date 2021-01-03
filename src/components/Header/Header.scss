@@ -1,0 +1,51 @@
+.header__container {
+  width: 100%;
+  height: var(--header-height);
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.12);
+  padding: 40px;
+  align-content: center;
+  display: grid;
+  grid-template-columns: auto repeat(3, 125px);
+  align-items: center;
+  background-color: #0e0e10;
+  color: white;
+  gap: 10px;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+    text-align: center;
+
+    &.header__title {
+      grid-column: 1 span;
+      height: fit-content;
+      color: white;
+
+      p {
+        justify-self: center;
+      }
+
+      img {
+        height: 5rem;
+        width: auto;
+        justify-self: center;
+      }
+    }
+    &:hover {
+      color: var(--input-background-color-hover);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    justify-items: center;
+  }
+
+  a.header__login {
+    justify-self: center;
+  }
+}
