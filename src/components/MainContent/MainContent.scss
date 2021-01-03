@@ -1,0 +1,16 @@
+.main__content {
+  grid-column: 8 span;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__content-title {
+  font-size: 4rem;
+  font-family: var(--second-font);
+}
+
+@media (max-width: 1553px) {
+  .main__content {
+    grid-column: 12 span;
+  }
+}
