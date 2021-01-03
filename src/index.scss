@@ -56,3 +56,34 @@ button {
   height: 100%;
   cursor: pointer;
 }
+
+.post__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+.main__content-text {
+  width: fit-content;
+  position: absolute;
+  bottom: 7%;
+  left: 5%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8) none;
+  background: none, linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8));
+}
