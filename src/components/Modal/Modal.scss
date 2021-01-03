@@ -1,0 +1,67 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: #ffffff;
+  padding: 50px;
+  z-index: 1000;
+  max-width: 400px;
+  min-width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 63px -24px rgba(255, 255, 255, 0.75);
+  gap: 15px;
+}
+
+.modal__wrapper i {
+  grid-column: 2 span;
+  font-size: 15rem;
+}
+
+.modal__wrapper i.success {
+  color: #a5dc86;
+}
+
+.modal__wrapper i.error {
+  color: #f27474;
+}
+
+.modal__wrapper i.info {
+  color: #3fc3ee;
+}
+
+.modal__type {
+  grid-column: 2 span;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+}
+
+.modal__info {
+  grid-column: 2 span;
+}
+
+.modal__button {
+  grid-column: 2 span;
+  width: fit-content;
+  padding: 7px 20px;
+  border-radius: 4rem;
+  background-color: var(--input-background-color-hover);
+}
+
+.modal__button:hover {
+  color: var(--input-color-hover);
+}
