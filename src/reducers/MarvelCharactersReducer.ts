@@ -22,7 +22,7 @@ const MarvelCharactersReducer = (state: IMarvelCharacters = MarvelCharactersInit
       return { ...state, favorites: [...state.favorites, action.payload.id] };
     }
     case MarvelCharactersActionList.DELETE_FAVORITES_CHARACTERS: {
-      return { ...state, favorites: state.favorites.map((favorite) => favorite !== action.payload.id) };
+      return { ...state, favorites: state.favorites.filter((favorite) => favorite !== action.payload.id) };
     }
     case MarvelCharactersActionList.DELETE_ALL_FAVORITES_CHARACTERS: {
       return { ...state, favorites: [] };
@@ -31,7 +31,7 @@ const MarvelCharactersReducer = (state: IMarvelCharacters = MarvelCharactersInit
       return { ...state, disliked: [...state.disliked, action.payload.id] };
     }
     case MarvelCharactersActionList.DELETE_DISLIKED_CHARACTERS: {
-      return { ...state, disliked: state.disliked.map((disliked) => disliked !== action.payload.id) };
+      return { ...state, disliked: state.disliked.filter((disliked) => disliked !== action.payload.id) };
     }
     case MarvelCharactersActionList.DELETE_ALL_DISLIKED_CHARACTERS: {
       return { ...state, disliked: [] };
