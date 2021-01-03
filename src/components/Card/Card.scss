@@ -1,0 +1,39 @@
+.side__content-card {
+  background-color: transparent;
+  transition: transform 0.2s ease;
+}
+
+.side__content-card:hover {
+  transform: scale(1.01);
+}
+
+.side__content-card:first-child {
+  padding-top: 10px;
+}
+
+.side__content-card:last-child {
+  padding-bottom: 10px;
+}
+
+.content-card__content {
+  background-color: var(--accent-color);
+  height: 100%;
+  width: 100%;
+}
+
+.card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.side__content-card-title {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
