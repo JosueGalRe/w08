@@ -6,17 +6,20 @@ enum ROUTE {
   CHARACTER = '/character/:id',
   STORIES = '/stories/:page',
   STORIE = '/storie/:id',
+  BOOKMARKS = '/bookmarks',
   ERROR = '*',
 }
 
 type TArgs =
+  | { path: string; params: { id?: number | string; page?: number | string } }
   | { path: ROUTE.HOME }
   | { path: ROUTE.COMICS; params: { page: number | string } }
-  | { path: ROUTE.COMIC; params: { id: number | string } }
   | { path: ROUTE.CHARACTERS; params: { page: number | string } }
-  | { path: ROUTE.CHARACTER; params: { id: number | string } }
   | { path: ROUTE.STORIES; params: { page: number | string } }
+  | { path: ROUTE.COMIC; params: { id: number | string } }
+  | { path: ROUTE.CHARACTER; params: { id: number | string } }
   | { path: ROUTE.STORIE; params: { id: number | string } }
+  | { path: ROUTE.BOOKMARKS }
   | { path: ROUTE.ERROR };
 
 type TArgsWithParams = Extract<TArgs, { path: any; params: any }>;
