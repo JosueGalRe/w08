@@ -9,7 +9,7 @@ type ModalTypes = {
 };
 
 function Modal({ open, info, type, onClose }: ModalTypes) {
-  if (!open) {
+  if (open === false) {
     return null;
   }
 
