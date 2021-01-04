@@ -1,0 +1,112 @@
+@import './../../vars.scss';
+
+.rdrDateDisplayWrapper,
+.rdrCalendarWrapper {
+  background-color: #161618;
+  color: white;
+}
+
+.rdrMonthAndYearPickers select {
+  color: #161618;
+  background-color: white;
+  &:hover {
+    color: #161618;
+    background-color: rgb(216, 216, 216);
+  }
+}
+
+.rdrWeekDays .rdrWeekDay {
+  color: white;
+}
+
+.rdrDayPassive .rdrDayNumber span {
+  color: rgb(156, 156, 156);
+}
+
+.rdrDayNumber span {
+  color: white;
+}
+
+.params__date-picker-wrapper {
+  display: block;
+  grid-template-columns: 1fr;
+  grid-column: 1 span;
+  align-self: center;
+  justify-items: center;
+  width: fit-content;
+
+  .params__date-title {
+    display: grid;
+    grid-template-columns: 115px 30px;
+    justify-self: end;
+    gap: 10px;
+    align-self: center;
+
+    p {
+      align-self: center;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    span.bx {
+      width: fit-content;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: transform ease-in 0.05s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .params__date-picker-picker {
+    grid-column: 1 span;
+    position: absolute;
+    z-index: 100;
+    right: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #161618;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.12);
+
+    .button__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .params__date-picker-button {
+      grid-column: 1 span;
+      justify-self: center;
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 30px;
+      border-radius: 4rem;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.6rem;
+      margin: 0 0 10px 0;
+
+      &.reset {
+        background-color: #ff3d3d;
+        border: 0.5px solid #ff3d3d;
+
+        &:hover {
+          background-color: #161618;
+          color: #ff3d3d;
+        }
+      }
+
+      &.accept {
+        background-color: #3d91ff;
+        border: 0.5px solid #3d91ff;
+
+        &:hover {
+          background-color: #161618;
+          color: #3d91ff;
+        }
+      }
+    }
+  }
+}
