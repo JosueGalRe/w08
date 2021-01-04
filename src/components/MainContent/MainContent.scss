@@ -1,12 +1,21 @@
+@import './../../vars.scss';
+
 .main__content {
   grid-column: 8 span;
   position: relative;
   overflow: hidden;
 }
 
+.background__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
 .main__content-title {
   font-size: 4rem;
-  font-family: var(--second-font);
+  font-family: $second-font;
 }
 
 @media (max-width: 1553px) {

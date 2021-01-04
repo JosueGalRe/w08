@@ -1,6 +1,8 @@
+@import './../../vars.scss';
+
 .container {
   height: fit-content;
-  background-color: var(--background-colo);
+  background-color: $background-color;
   width: 100%;
   padding: 10px;
   margin: 0 auto;
