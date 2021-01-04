@@ -1,3 +1,5 @@
+@import './../../vars.scss';
+
 .overlay {
   position: fixed;
   top: 0;
@@ -46,7 +48,7 @@
 
 .modal__type {
   grid-column: 2 span;
-  font-family: var(--secondary-font);
+  font-family: $second-font;
   font-size: 3rem;
 }
 
@@ -59,9 +61,9 @@
   width: fit-content;
   padding: 7px 20px;
   border-radius: 4rem;
-  background-color: var(--input-background-color-hover);
+  background-color: $input-background-color-hover;
 }
 
 .modal__button:hover {
-  color: var(--input-color-hover);
+  color: rgb(109, 109, 109);
 }
