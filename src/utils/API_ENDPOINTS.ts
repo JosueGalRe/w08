@@ -7,6 +7,34 @@ enum APIType {
   STORIES = 'stories',
 }
 
+export enum Format {
+  COMIC = 'comic',
+  MAGAZINE = 'magazine',
+  TRADE_PAPERBACK = 'trade paperback',
+  HARDCOVER = 'hardcover',
+  DIGEST = 'digest',
+  GRAPHIC_NOVEL = 'graphic novel',
+  DIGITAL_COMIC = 'digital comic',
+  INFINITE_COMIC = 'infinite comic',
+}
+
+export enum orderBy {
+  FOC_DATE = 'focDate',
+  ON_SALE_DATE = 'onsaleDate',
+  TITLE = 'title',
+  NAME = 'name',
+  ISSUE_NUMBER = 'issueNumber',
+  ID = 'id',
+  MODIFIED = 'modified',
+  DESC_ID = '-id',
+  DESC_FOC_DATE = '-focDate',
+  DESC_ON_SALE_DATE = '-onsaleDate',
+  DESC_TITLE = '-title',
+  DESC_NAME = '-name',
+  DESC_ISSUE_NUMBER = '-issueNumber',
+  DESC_MODIFIED = '-modified',
+}
+
 export interface urlParams {
   title?: string;
   format?: string;
