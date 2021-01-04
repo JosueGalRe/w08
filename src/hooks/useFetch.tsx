@@ -15,7 +15,7 @@ const useFetch = <T,>({ url, method = 'get' }: useFetchTypes): [T | null, { erro
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
-      API({ url: url + API_AUTH(), method })
+      API({ url: `${url}${API_AUTH()}`, method })
         .then((response: { data: T }): void => {
           setResponse(response.data);
         })
