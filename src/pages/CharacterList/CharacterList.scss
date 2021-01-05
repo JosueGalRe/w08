@@ -1,0 +1,122 @@
+@import './../../vars.scss';
+
+.list__wrapper-params {
+  grid-column: 12 span;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 0;
+  gap: 10px;
+
+  .list__title {
+    grid-column: 1 / -1;
+    font-size: 2.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .params__date-picker-button {
+      grid-column: 1 span;
+      justify-self: end;
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 30px;
+      border-radius: 4rem;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.6rem;
+      margin: 0 0 10px 0;
+      background-color: #3d91ff;
+      border: 0.5px solid #3d91ff;
+
+      &:hover {
+        background-color: white;
+        color: #3d91ff;
+      }
+    }
+  }
+}
+
+.no-results {
+  grid-column: 1 /-1;
+  display: grid;
+  gap: 30px;
+  font-size: 5rem;
+  text-align: center;
+
+  .params__date-picker-button {
+    grid-column: 1 span;
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 30px;
+    border-radius: 4rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin: 0 0 10px 0;
+    background-color: #3d91ff;
+    border: 0.5px solid #3d91ff;
+
+    &:hover {
+      background-color: white;
+      color: #3d91ff;
+    }
+  }
+}
+
+.game-list__wrapper {
+  grid-column: 12 span;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-auto-rows: 320px;
+  width: 100%;
+}
+
+.pagination {
+  display: inline-block;
+  grid-column: 12 span;
+
+  li {
+    list-style: none;
+    float: left;
+    padding: 8px 16px;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+
+    &.active {
+      background-color: #161618;
+      color: white;
+    }
+
+    &:hover:not(.active) {
+      background-color: $input-background-color-hover;
+    }
+
+    a {
+      color: $input-background-color;
+      width: fit-content;
+      height: fit-content;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .list__wrapper-params {
+    margin-top: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .list__title {
+      justify-self: center;
+      grid-column: 2 span;
+    }
+  }
+
+  .params__search-wrapper {
+    grid-column: 2 span;
+  }
+}
